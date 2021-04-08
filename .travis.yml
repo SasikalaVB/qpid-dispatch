@@ -44,6 +44,26 @@ jobs:
       - $HOME/.m2/repository
     after_script:
     - cat target/rat.txt || true
+  - name: "apache-rat:check"
+    os: linux
+    arch: s390x
+    env: []
+    language: java
+    addons:
+      apt:
+        packages: []
+    install: []
+    before_script: []
+    script:
+    - mvn apache-rat:check
+    before_cache:
+    - rm -rf $HOME/.m2/repository/org/apache/qpid/*
+    cache:
+      directories:
+      - $HOME/.m2/repository
+    after_script:
+    - cat target/rat.txt || true
+    
   # prepending /usr/bin to PATH to avoid mismatched python interpreters in /opt
   - name: "qdrouterd:Debug (gcc on xenial)"
     os: linux
