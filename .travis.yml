@@ -134,7 +134,7 @@ jobs:
     dist: groovy
     compiler: clang
     before_install:
-    - sudo apt install clang llvm-11-dev
+    - sudo apt install clang
     # https://github.com/pypa/virtualenv/issues/1740
     # https://github.com/pypa/virtualenv/issues/1873
     - python -m pip install --user --upgrade pip
