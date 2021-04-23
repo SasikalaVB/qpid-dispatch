@@ -91,7 +91,7 @@ jobs:
   - name: "apache-rat:check"
     os: linux
     arch: s390x
-	env: []
+    env: []
     language: java
     addons:
       apt:
