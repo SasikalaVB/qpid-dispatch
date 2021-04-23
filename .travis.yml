@@ -88,7 +88,7 @@ jobs:
     python:
       - "3.9"
  # Adding jobs for s390x
-    - name: "apache-rat:check"
+  - name: "apache-rat:check"
     os: linux
     arch: s390x
 	env: []
